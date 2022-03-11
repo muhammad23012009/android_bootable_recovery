@@ -11,6 +11,9 @@ on early-init
     start ueventd
     start healthd
 
+    # Set property to allow installers to identify recovery
+    setprop ro.ubuntu.recovery true
+
 on init
     export PATH /sbin:/system/bin
     export ANDROID_ROOT /system
